@@ -3,9 +3,11 @@
 
 <p><%=@suggestion%></p>
 <%if @included && @english_word%>
-    <p><%="The word is valid according to the grid and is an English word"%></p>
+    <p>The word is valid according to the grid and is an English word</p>
   <%elsif @included%>
-    <p><%="The word is valid according to the grid, but is not a valid English word"%></p>
+    <p>The word is valid according to the grid, but is not a valid English word</p>
   <%else%>
-    <p><%="The word can’t be built out of the original grid"%></p>
+    <p>The word can’t be built out of the original grid</p>
   <%end%>
+
+<p><%= link_to "Play again", new_path %></p>
